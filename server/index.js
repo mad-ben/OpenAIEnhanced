@@ -1,8 +1,11 @@
-//import { Configuration, OpenAIApi } from "openai";
-const { Configuration, OpenAIApi } = require("openai")
-const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
+import { Configuration, OpenAIApi } from "openai";
+//const { Configuration, OpenAIApi } = require("openai")
+import express from 'express';
+//const express = require('express')
+//const bodyParser = require('body-parser')
+import bodyParser from "body-parser";
+//const cors = require('cors')
+import cors from 'cors';
 
 const configuration = new Configuration({
     apiKey: "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",
@@ -22,10 +25,10 @@ app.use(cors())
 const port = 3080
 
 app.post('/', async (req, res) => {
-    const { message } = req.body;
+    const { message, currentModel } = req.body;
     console.log(message)
     const response = await openai.createCompletion({
-        model: "text-davinci-003",
+        model: `${currentModel}`,
         prompt: `${message}`,
         max_tokens: 100,
         temperature: 0.5,
