@@ -1,50 +1,86 @@
 .App {
   text-align: center;
-  display:flex;
+  display: flex;
   background-color: #282c34;
-  color:white;
-  position:absolute;
-  top:0;bottom:0;right:0;left:0;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-
 .sidemenu {
-  width:300px;
-  padding:10px;
+  width: 300px;
+  padding: 10px;
   background-color: #202123;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .advanced-settings {
-  padding:10px;
-  margin-top: 60px;
+  padding: 10px;
   background-color: #343541;
   border-radius: 15px;
-  font-size: 1.25em;
+  font-size: x-large;
 }
 
-.models {
-  
+.advanced-menu {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
-.model-select{
+.desc-text {
+  font-size: 12px;
+  color: white;
+  line-height: 20px;
+}
+
+.instruction-text {
+  text-align: left;
+  line-height: 25px;
+}
+
+.model-select {
   background-color: #5b5d75;
-  outline:none;
+  outline-style: solid;
+  outline-width: 2px;
   border: 0px;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
 }
 
-.model-text{
+.model-select:hover {
+  cursor: pointer;
+}
+
+.number-select {
   background-color: #5b5d75;
-  padding:5px;
+  outline-style: solid;
+  outline-width: 2px;
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.model-text {
+  background-color: #5b5d75;
+  padding: 5px;
   border-radius: 10px;
+  font-size: large;
 }
 
 .side-menu-button {
-  padding:12px;
-  border:1px solid white;
+  padding: 12px;
+  margin-top: 5%;
+  border: 1px solid white;
   border-radius: 5px;
   text-align: left;
   transition: ease 0.25s all;
@@ -52,6 +88,7 @@
 
 .side-menu-button:hover {
   background-color: #ffffff23;
+  cursor: pointer;
 }
 
 .side-menu-button span {
@@ -60,28 +97,29 @@
 }
 
 .chatbox {
-  flex:1;
+  flex: 1;
   background-color: #343541;
   position: relative;
 }
 
 .chat-input-holder {
-  padding:24px;
+  padding: 24px;
   position: absolute;
-  bottom:0;
-  left:0;right:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .chat-input-textarea {
   background-color: #40414f;
-  width:90%;
-  padding:12px;
-  color:white;
-  border-radius:5px;
-  border:none;
+  width: 90%;
+  padding: 12px;
+  color: white;
+  border-radius: 5px;
+  border: none;
   border-color: none;
-  outline:none;
-  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+  outline: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
 }
 
 .chat-log {
@@ -96,8 +134,8 @@
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  padding:12px;
-  display:flex;
+  padding: 12px;
+  display: flex;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -116,7 +154,7 @@
   height: 40px;
 }
 
-.message{
+.message {
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -136,5 +174,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-
