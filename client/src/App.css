@@ -11,9 +11,11 @@
 }
 
 .sidemenu {
-  width: 300px;
+  width: 320px;
   padding: 10px;
   background-color: #202123;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {

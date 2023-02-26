@@ -29,7 +29,7 @@ function App() {
   }
 
   function getEngines() {
-    fetch("http://localhost:3080/models")
+    fetch("https://openai-enhanced-kw7e.onrender.com/models")
       .then((res) => res.json())
       .then((data) => {
         console.log(data.models);
@@ -45,7 +45,7 @@ function App() {
     //console.log("submit")
 
     const messages = chatLogNew.map((message) => message.message).join("\n");
-    const response = await fetch("http://localhost:3080/", {
+    const response = await fetch("https://openai-enhanced-kw7e.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,9 @@ function App() {
   return (
     <div className="App">
       <aside className="sidemenu">
-        <h2>JERICHO Enhanced Chat</h2>
+        <h2>
+          JERICHO Enhanced Chat <br /> BETA
+        </h2>
         <hr class="rounded"></hr>
         <div>
           <div className="side-menu-button" onClick={clearChat}>
