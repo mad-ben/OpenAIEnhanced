@@ -126,10 +126,14 @@ a {
 
 .chat-log {
   text-align: left;
+  max-height: 860px;
+  overflow-y: scroll;
 }
 
 .chat-message.chatgpt {
   background-color: #444654;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .chat-message-center {
