@@ -16,6 +16,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+
+app.get('/', async (req,res)=>{
+  res.status(200).send({
+      message: 'Hello from Jericho',
+  })
+
 const port = 3080;
 
 app.post("/", async (req, res) => {
